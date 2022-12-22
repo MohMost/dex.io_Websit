@@ -1,0 +1,141 @@
+*{
+  margin:0;
+  padding: 0;
+  font-family: Poppins;
+  text-decoration: none;
+  list-style: none;
+}
+body{
+  background-color: #CF7B7B;
+}
+.name{
+  left: 980px;
+  top: 240px;
+  position: absolute;
+  font-size: 35px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 0px 40px 0 0;
+  
+}
+.types{
+  text-transform: capitalize;
+  width: 180px;
+  left: 1005px;
+  top: 775px;
+  position: absolute;
+  font-size: 25px;
+  font-weight: 700;
+}
+.weight{
+  left: 1355px;
+  top: 655px;
+  position: absolute;
+  font-size: 22px;
+  font-weight: bold;
+}
+.stats{
+  left: 1355px;
+  top: 360px;
+  position: absolute;
+  font-size: 22px;
+  font-weight: bold;
+}
+.index {
+  left: 405px;
+  top: 265px;
+  position: absolute;
+  font-size: 35px;
+  font-weight: bold;
+}
+.artwork > img{
+  position: absolute;
+  left: 520px;
+  top: 310px;
+  width: 350px;
+  height: auto;
+}
+.sprit > img{
+  position: absolute;
+  left: 400px;
+  top: 620px;
+  width: 150px;
+  height: auto;
+}
+.ability {
+  text-transform: capitalize;
+  left: 1315px;
+  top: 260px;
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+}
+.entry{
+  width: 180px;
+  left: 1045px;
+  top: 470px;
+  position: absolute;
+  font-size: 14px;
+  font-weight: 700;
+}
+div img{
+  margin-top: 2%;
+  height: 70vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+div ul .title {
+  display:inline-block;
+  margin: 20px;
+  font-size: 25px;
+  
+}
+div.form{
+    display: block;
+    text-align: center;
+}
+form{
+    margin-top: 25px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+div form label{
+  display: block;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+div form input{
+  border-radius: 30px;
+  border: none;
+  background-color: #D8A5A5;
+  text-align: center;
+  padding:15px;
+  width: 20em;
+  font-size: 1.5em;
+}
+::placeholder {
+  color: #F2EAEA;
+  opacity: 0.7;
+}
+div .right{
+  position: absolute;
+  width: 70px;
+  height: auto;
+  right: 2%;
+  top: 35%;
+  cursor: pointer;
+  
+}
+div .left{
+  position: absolute;
+  width: 70px;
+  height: auto;
+  left: 2%;
+  top: 35%;
+  cursor: pointer;
+}
