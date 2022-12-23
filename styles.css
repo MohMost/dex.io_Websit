@@ -7,7 +7,7 @@
 }
 body{
   max-height: auto;
-  max-width: auto;
+  max-width: 100%;
   background-color: #CF7B7B;
 }
 .name{
@@ -614,14 +614,55 @@ div .left{
     font-size: 14px;
   }
 }
-@media screen and (max-width:360px){
-  .name{
-    left: 67%;
+@media screen and (max-width:361px){
+  .index {
+    left: 4%;
     top: 44%;
-    font-size: 14px;
+    font-size: 12px;
+  }
+  .ability {
+    left: 80%;
+    top: 275px;
+    font-size: 15px;
+  }
+  .sprit > img{
+    left: 4%;
+    top: 45%;
+    width: 45px;
+  }
+  .artwork > img{
+    left: 7%;
+    top:27%;
+    width: 140px;
+  }
+  .stats{
+    left: 83%;
+    top: 48.5%;
+    font-size: 7px;
+  }
+  .types p{
+    
+    top: 67.7%;
+    font-size: 11px;
+  }
+  .weight{
+    left: 80%;
+    top: 62%;
+    font-size: 9px;
+  }
+  .name{
+    left: 50%;
+    top: 43.5%;
+    font-size: 12px;
   }
   div img{
     margin-top: 30%;
-    max-width: 130%;
+    max-width: 100%;
+}
+.entry{
+  width: 60px;
+  left: 56.5%;
+  top: 344px;
+  font-size: 4.3px;
 }
 }
