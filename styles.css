@@ -9,56 +9,55 @@ body{
   background-color: #CF7B7B;
 }
 .name{
-  left: 980px;
-  top: 240px;
+  left: 51%;
+  top: 25%;
   position: absolute;
   font-size: 35px;
   font-weight: bolder;
   text-transform: uppercase;
-  padding: 0px 40px 0 0;
+ 
   
 }
-.types{
-  text-transform: capitalize;
-  width: 180px;
-  left: 1005px;
-  top: 775px;
+.types p{ 
+  left: 53%;
+  top: 80%;
   position: absolute;
   font-size: 25px;
-  font-weight: 700;
+  font-weight: bolder;
+  text-transform: capitalize;
 }
 .weight{
-  left: 1355px;
+  left: 70%;
   top: 655px;
   position: absolute;
   font-size: 22px;
   font-weight: bold;
 }
 .stats{
-  left: 1355px;
-  top: 360px;
+  left: 70%;
+  top: 37.5%;
   position: absolute;
   font-size: 22px;
   font-weight: bold;
 }
 .index {
-  left: 405px;
-  top: 265px;
-  position: absolute;
+  left: 20.8%;
+  top: 28%;
   font-size: 35px;
+  position: absolute;
   font-weight: bold;
 }
 .artwork > img{
   position: absolute;
-  left: 520px;
-  top: 310px;
+  left: 25%;
+  top: 30%;
   width: 350px;
   height: auto;
 }
 .sprit > img{
   position: absolute;
-  left: 400px;
-  top: 620px;
+  left: 21%;
+  top: 64%;
   width: 150px;
   height: auto;
 }
@@ -80,11 +79,11 @@ body{
 }
 div img{
   margin-top: 2%;
-  height: 70vh;
+  height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: auto;
+  max-width: 63%;
 }
 div ul .title {
   display:inline-block;
@@ -106,7 +105,7 @@ form{
 div form label{
   display: block;
   text-align: center;
-  font-size: 2em;
+  font-size: 2rem ;
   margin-bottom: 15px;
 }
 div form input{
@@ -138,4 +137,478 @@ div .left{
   left: 2%;
   top: 35%;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1669px) {
+  .sprit > img{
+    top: 58%;
+    width: 130px;
+  }
+  .artwork > img{
+    top: 25%;
+    width: 345px;
+  }
+  .weight{
+    top: 60%;
+    font-size: 22px;
+  }
+  .name{
+    top: 24%;
+    font-size: 30px;
+  }
+  .types p{
+    top: 72%;
+    font-size: 20px;
+  }
+  .stats{
+    top: 34.5%;
+    font-size: 19px;
+  }
+  .index {
+    top: 26%;
+    font-size: 29px;
+  }
+}
+@media screen and (max-width:1663px){
+  .sprit > img{
+    top: 56%;
+    width: 130px;
+  }
+}
+
+@media screen and (max-width:1660px){
+  .sprit > img{
+    top: 55%;
+    width: 130px;
+  }
+  .artwork > img{
+    top: 24%;
+    width: 343px;
+  }
+  .index {
+    top: 25%;
+    font-size: 28px;
+  }
+  .weight{
+    top: 58%;
+    font-size: 21px;
+  }
+  .name{
+    top: 23%;
+    font-size: 30px;
+  }
+  .types p{
+    top: 70%;
+    font-size: 20px;
+  }
+  .stats{
+    top: 33.5%;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width:1600px){
+  .sprit > img{
+    top: 54%;
+    width: 130px;
+  }
+  .artwork > img{
+    top: 23%;
+    width: 342px;
+  }
+  .index {
+    font-size: 26px;
+  }
+  .weight{
+    top: 56%;
+    font-size: 21px;
+  }
+  .types p{
+    top: 68%;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:1500px){
+  .sprit > img{
+    top: 51%;
+    width: 130px;
+  }
+  .artwork > img{
+    top: 21%;
+    width: 340px;
+  }
+  .index {
+    font-size: 25px;
+  }
+  .stats{
+    top: 31.5%;
+    font-size: 18px;
+  }
+  .weight{
+    top: 54%;
+    font-size: 21px;
+  }
+  .types p{
+    top: 66%;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:1430px){
+  .sprit > img{
+    top: 50%;
+    width: 120px;
+  }
+  .artwork > img{
+    top: 22%;
+    width: 300px;
+  }
+  .index {
+    font-size: 24px;
+  }
+  .stats{
+    top: 30.5%;
+    font-size: 17px;
+  }
+  .weight{
+    top: 53%;
+    font-size: 21px;
+  }
+  .types p{
+    top: 64%;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:1370px){
+  .artwork > img{
+    top: 21%;
+    width: 295px;
+  }
+  .stats{
+    top: 30.3%;
+    font-size: 15px;
+  }
+  .weight{
+    top: 52%;
+    font-size: 21px;
+  }
+  .types p{
+    top: 62%;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:1314px){
+  .sprit > img{
+    top: 49%;
+    width: 115px;
+  }
+  .artwork > img{
+    top: 21%;
+    width: 250px;
+  }
+  .stats{
+    top: 30%;
+    font-size: 15px;
+  }
+  .weight{
+    top: 50%;
+    font-size: 21px;
+  }
+  .types p{
+    top: 61%;
+    font-size: 17px;
+  }
+}
+@media screen and (max-width:1280px){
+  .sprit > img{
+    top: 47%;
+    width: 114px;
+  }
+  .index {
+    font-size: 23px;
+  }
+  .weight{
+    top: 48%;
+    font-size: 21px;
+  }
+  .types p{
+    top: 59%;
+    font-size: 17px;
+  }
+}
+@media screen and (max-width:1230px){
+  .sprit > img{
+    top: 46%;
+    width: 110px;
+  }
+  .index {
+    top: 23%;
+    font-size: 20px;
+  }
+  .name{
+    top: 21%;
+    font-size: 23px;
+  }
+
+}
+@media screen and (max-width:1220px){
+  .name{
+    top: 23%;
+    font-size: 23px;
+  }
+  .stats{
+    top: 29%;
+    font-size: 14px;
+  }
+  .types p{
+    top: 57%;
+    font-size: 17px;
+  }
+}
+@media screen and (max-width:1200px){
+  .sprit > img{
+    top: 44%;
+    width: 105px;
+  }
+  .stats{
+    top: 28%;
+    font-size: 13px;
+  }
+  .weight{
+    top: 47%;
+    font-size: 15px;
+  }
+  .name{
+    top: 21%;
+    font-size: 23px;
+  }
+  .types p{
+    top: 55%;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width:1100px){
+  .sprit > img{
+    top: 42%;
+    width: 102px;
+  }
+  .artwork > img{
+    top: 21%;
+    width: 230px;
+  }
+  .stats{
+    top: 27%;
+    font-size: 12px;
+  }
+  .weight{
+    top: 45%;
+    font-size: 15px;
+  }
+  .types p{
+    top: 53%;
+    font-size: 16px;
+  }
+
+}
+@media screen and (max-width:1057px){
+  .sprit > img{
+    top: 42%;
+    width: 85px;
+  }
+  .artwork > img{
+    top: 20%;
+    width: 225px;
+  }
+  .index {
+    top: 22%;
+    font-size: 16px;
+  }
+  .stats{
+    top: 28%;
+    font-size: 11px;
+  }
+  .weight{
+    top: 44%;
+    font-size: 15px;
+  }
+  .types p{
+    top: 51%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width:1007px){
+  .types p{
+    top: 49%;
+    font-size: 16px;
+  }
+}
+@media screen and  (max-width: 1000px) {
+  .artwork > img{
+    top: 19%;
+    width: 210px;
+  }
+  .weight{
+    top: 42%;
+    font-size: 14px;
+  }
+  .name{
+    top: 21%;
+    font-size: 23px;
+  }
+}
+@media screen and (max-width:945px){
+  .types p{
+    top: 48%;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width:925px){
+  .stats{
+    top: 26%;
+    font-size: 10px;
+  }
+  .weight{
+    top: 40%;
+    font-size: 14px;
+  }
+  .name{
+    top: 20%;
+    font-size: 21px;
+  }
+  .types p{
+    top: 47%;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width:890px){
+  .artwork > img{
+    top: 20%;
+    width: 175px;
+  }
+  .index {
+    top: 21%;
+    font-size: 14px;
+  }
+  .weight{
+    top: 39%;
+    font-size: 13px;
+  }
+  .types p{
+    top: 46%;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:860px){
+  .stats{
+    top: 25.5%;
+    font-size: 9px;
+  }
+  .weight{
+    top: 38%;
+    font-size: 12px;
+  }
+  .types p{
+    top: 45%;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:830px){
+  .types p{
+    top: 44%;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:802px){
+  .types p{
+    top: 43%;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:795px){
+  .artwork > img{
+    top: 20%;
+    width: 150px;
+  }
+  .index {
+    top: 20%;
+    font-size: 12px;
+  }
+  .stats{
+    top: 24.5%;
+    font-size: 9px;
+  }
+  .weight{
+    top: 37%;
+    font-size: 12px;
+  }
+  .name{
+    top: 19.5%;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:772px){
+  .stats{
+    top: 24.3%;
+    font-size: 9px;
+  }
+  .weight{
+    top: 36%;
+    font-size: 11px;
+  }
+  .types p{
+    top: 42%;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width:744px){
+
+  .types p{
+    top: 41%;
+    font-size: 13px;
+  }
+  
+  
+}
+@media screen and (max-width:716px){
+  .stats{
+    top: 24%;
+    font-size: 8px;
+  }
+  .weight{
+    top: 35%;
+    font-size: 11px;
+  }
+  .types p{
+    top: 40%;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width:685px){
+  .weight{
+    top: 34.5%;
+    font-size: 11px;
+  }
+  .name{
+    top: 19.2%;
+    font-size: 19px;
+  }
+  .types p{
+    top: 39%;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width:640px){
+  .weight{
+    top: 32.5%;
+    font-size: 11px;
+  }
+  .name{
+    top: 19%;
+    font-size: 17px;
+  }
+}
+@media screen and (max-width:590px){
+  .name{
+    top: 18.5%;
+    font-size: 15px;
+  }
 }
