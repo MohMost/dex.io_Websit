@@ -6,6 +6,8 @@
   list-style: none;
 }
 body{
+  max-height: auto;
+  max-width: auto;
   background-color: #CF7B7B;
 }
 .name{
@@ -611,4 +613,15 @@ div .left{
     top: 18.5%;
     font-size: 14px;
   }
+}
+@media screen and (max-width:360px){
+  .name{
+    left: 67%;
+    top: 44%;
+    font-size: 14px;
+  }
+  div img{
+    margin-top: 30%;
+    max-width: 130%;
+}
 }
