@@ -73,7 +73,7 @@ body{
 }
 .entry{
   width: 180px;
-  left: 30%;
+  left: 55%;
   top: 470px;
   position: absolute;
   font-size: 14px;
@@ -664,5 +664,10 @@ div .left{
   left: 56.5%;
   top: 344px;
   font-size: 4.3px;
+}
+div form input{
+  padding:13px;
+  width: 15em;
+  font-size: 1.2em;
 }
 }
