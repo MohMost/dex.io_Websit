@@ -55,6 +55,7 @@ header .logo img{
   position: relative;
   margin-left: 15%;
   margin-top: 7%;
+  margin-bottom: 4%;
   margin-right: auto;
   width: 70%;
   align-items: center;
@@ -80,8 +81,8 @@ h1 .most{
  left: auto;
  right: auto;
  border-radius: 30rem;
- padding: 1rem;
- font-size: 0.8rem;
+ padding: 1.3rem;
+ font-size: 0.99rem;
  border: none;
  background: #EBEAEA;
 
@@ -99,7 +100,7 @@ h1 .most{
   justify-content: space-between;
 }
 .searchBar .filters .drop {
-  justify-content: space-between;
+ 
   display: flex;
   color: #EBEAEA;
   margin: auto 0.5rem auto 0;
@@ -134,20 +135,64 @@ h1 .most{
 .pokeList .card{
   margin-left: auto;
   margin-right: auto;
-
-  width: 220px;
+  width: 250px;
   height: 350px;
-  background-color: #FFC2B5 ;
   border-radius: 8%;
 }
-.pokeList .card2{
-  margin-left: auto;
-  margin-right: auto;
+.grass{
+  background: #B1F1A0;
+}
+.fire{
+  background: #FFC2B5;
 
-  width: 220px;
-  height: 350px;
-  background-color: #D5FFB5 ;
-  border-radius: 8%;
+}
+.water{
+  background: #ADD3FF;
+}
+.ground{
+  background: #D59567;
+}
+.bug{
+  background: #F5FFA0;
+}
+.dark{
+  background: #D49188;
+}
+.dragon{
+  background: #959FFF; 
+}
+.electric{
+  background: #FFE592; 
+}
+.fairy{
+  background: #FEB5FF;
+}
+.fighting{
+  background: #FFCFA0; 
+}
+.flying{
+  background: #95CBFF; 
+}
+.ghost{
+  background: #D68FD7;
+}
+.ice{
+  background: #CAF4FF;
+}
+.normal{
+  background: #BDBDBD;
+}
+.poison{
+  background: #CE9CF5;
+}
+.psychic{
+  background: #FF92B3;
+}
+.rock{
+  background: #F0E9B7;
+}
+.steel{
+  background: #D1F3FF;
 }
 .cardHead{
   position: relative;
@@ -155,20 +200,16 @@ h1 .most{
   border-radius: 8% 8% 0 0;
   height: 220px;
 }
+
 .pokeList .card .cardHead img{
   position: relative;
   display:block;
-  width: 100%;
-  left: auto;
+
+  left: 5%;
   right: auto;
+  object-fit: scale-down
 }
-.pokeList .card2 .cardHead img{
-  position: relative;
-  display:block;
-  width: 100%;
-  left: auto;
-  right: auto;
-}
+
 .cardHead .index{
   background: #140941;
   position: absolute;
@@ -186,19 +227,21 @@ h1 .most{
   font-weight: 550;
 }
 .cardDetail div{
-  
+  margin-left: 0px;
+  padding-left: 0px;
   display: flex;
   align-items: center;
 }
 .cardDetail div img{
-  width: 80px;
-  height: 16px;
+  width: 70px;
+  height: 14px;
 }
 .cardDetail div p{
   font-size: 23px;
   font-weight: 600;
   color: #140941;
   margin:15px;
+  text-transform: capitalize
 }
 .cardDetail .stats{
   display: flex;
@@ -219,4 +262,76 @@ h1 .most{
   padding-left: 15px;
   padding-right: 15px;
   font-size: 0.9rem;
+}
+
+
+@media screen and (min-width:700px){
+  .title{
+    font-size: 1.7rem;
+  }
+  .h1{
+    width: 70%;
+  }
+  h1{
+  font-size: 2.8rem;
+  }
+  .searchBar input{
+  font-size: 1.1rem;
+  padding: 1.6rem;
+  }
+}
+
+@media screen and (min-width:800px){
+
+  .searchBar{
+    display: flex;
+    justify-content: space-between;
+  }
+  .searchBar .filters{
+    font-size: 90%;
+    
+  }
+  
+}
+@media screen and (min-width:1100px){
+  header .logo img{
+    width: 2.7rem;
+  }
+.searchBar input{
+  width: 100%;
+}
+.searchBar .filters {
+  width: 100%;
+}
+.searchBar .filters .drop{
+  margin: auto 0.1rem auto 0;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.8rem;
+}
+.searchBar .filters .filter {
+  font-size: 1.2rem;
+}
+}
+@media screen and (min-width:1400px){
+  .searchBar input{
+    padding: 2rem;
+    font-size: 1.5rem;
+
+  }
+  .searchBar .filters .drop{
+    padding: 0.5rem 1.5rem;
+    margin: 0.2rem;
+    font-size: 1.3rem;
+  }
+  h1{
+    font-size: 5rem;
+
+  }
+  .searchBar .or{
+    font-size: 2rem;
+  }
+  .title{
+    font-size: 2.5rem;
+
+  }
 }
