@@ -1,7 +1,7 @@
 const arrow = document.querySelector(".scroll")
 const search = document.querySelector(".searchBar .search")
 const addForm = document.querySelector ('.add')
-const styles = document.querySelector()
+
 
 addForm.addEventListener("submit",()=>{
   e.preventDefault();
