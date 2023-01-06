@@ -282,6 +282,9 @@ h1 .most{
   border-radius: 8% 8% 0 0;
   height: 220px;
 }
+.effect {
+ opacity: 0.2;
+}
 
 .pokeList .card .cardHead img{
   position: relative;

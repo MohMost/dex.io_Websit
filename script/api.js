@@ -2,6 +2,7 @@ const container = document.querySelector('.pokeList')
 
 const api ='https://pokeapi.co/api/v2/pokemon/'
 
+
 const fetchPokemon = async () => {
   for (let i = 1; i <=905; i++){
     await getPokemon(i)
@@ -19,12 +20,15 @@ const getPokemon = async (id) => {
 fetchPokemon()
 
 function creatCard(pokemon) {
+ 
   const element = document.createElement("div")
+  element.setAttribute('data-tilt', '')
   element.classList.add(`card`)
   element.classList.add(`${pokemon.types[0].type.name}`)
+  
   const html =`
   
-  <div class="cardHead">
+  <div class="cardHead" >
     <img width="220px" src="${pokemon.sprites.other["official-artwork"].front_default}" alt="">
     <div class="index"><p>#${pokemon.id}</p></div>
   </div>
@@ -51,4 +55,5 @@ function creatCard(pokemon) {
   `
  element.innerHTML =html
  container.appendChild(element)
+ 
 }
