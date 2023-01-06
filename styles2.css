@@ -1,23 +1,4 @@
-::-webkit-scrollbar {
-  width: 1.5em;
-  height: 1em;
-}
 
-::-webkit-scrollbar-track {
-  background: #EBEAEA;
-  border-radius: 100vw;
-  margin-block: 0.5em;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #140941;
-  border: 0.15em solid #EBEAEA;
-  border-radius: 100vw;
-  height: 5rem;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #F8003F;
-}
 *{
   box-sizing: border-box;
   margin: 0;
@@ -26,16 +7,11 @@
   text-decoration: none;
   list-style: none;
 }
-html{
-  scroll-behavior: smooth;
-}
+
 body {
-  background: #140941;
+  background: #EBEAEA;
   max-width: 100vw;
  
-}
-main{
-  margin-bottom: 5rem;
 }
 header{
   display: flex;
@@ -73,7 +49,7 @@ header .logo img{
   font-size: 1.2rem;
 }
 .title .io{
-  color: #EBEAEA;
+  color: #140941;
 }
 .h1{
   position: relative;
@@ -91,7 +67,7 @@ h1{
   color: #F8003F;
 }
 h1 .most{
-  color: #EBEAEA;
+  color: #140941;
 }
 
 .searchBar {
@@ -110,8 +86,8 @@ h1 .most{
  border-radius: 30rem;
  font-size: 0.99rem;
  border: none;
- background:#EBEAEA ;
- color: #140941;
+ background: #140941;
+ color: #EBEAEA;
 
 }
 .searchBar .or{
@@ -129,9 +105,9 @@ h1 .most{
 .searchBar .filters .drop {
  
   display: flex;
-  color: #EBEAEA;
+  color: #140941;
   margin: auto 0.5rem auto 0;
-  border : 2.5px solid #EBEAEA ;
+  border : 2.5px solid #140941 ;
   padding: 0.3rem;
   border-radius: 10%;
  
@@ -162,7 +138,6 @@ h1 .most{
 .pokeList .card{
   margin-left: auto;
   margin-right: auto;
-  bottom:10%;
   width: 250px;
   height: 350px;
   border-radius: 8%;
@@ -250,7 +225,7 @@ h1 .most{
   background: #BDBDBD;
 }
 .normal:hover{
-  filter: drop-shadow(0 0 0.90rem #dfdfdf);
+  filter: drop-shadow(0 0 0.90rem #BDBDBD);
 }
 .poison{
   background: #CE9CF5;
@@ -273,7 +248,7 @@ h1 .most{
 .steel{
   background: #D1F3FF;
 }
-.steel:hover{
+.steal:hover{
   filter: drop-shadow(0 0 0.90rem #D1F3FF);
 }
 .cardHead{

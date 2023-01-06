@@ -1,6 +1,7 @@
 const container = document.querySelector('.pokeList')
-console.log(container)
+
 const api ='https://pokeapi.co/api/v2/pokemon/'
+
 const fetchPokemon = async () => {
   for (let i = 1; i <=905; i++){
     await getPokemon(i)

@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link class="theme" rel="stylesheet" href="styles.css">
+  <style >@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');</style>
   <script src="https://kit.fontawesome.com/8aa12b2e1f.js" crossorigin="anonymous"></script>
   <title>DEX.IO</title>
 </head>
@@ -36,7 +37,10 @@
     <!--Search & filter-->
 
     <div class="searchBar">
-      <input class="search" type="text" placeholder="Enter pokémon name here........." />
+      <form class="add">
+        <input name="add" class="search" type="text" placeholder="Enter pokémon name here........." />
+      </form>
+      
       <p class="or">or</p>
       <div class="filters">
         <div class="drop filter">
@@ -62,11 +66,33 @@
     <div  class="pokeList">
       
     </div> 
+<a class="scroll" href="#"><img class="arrow" src="img/right.png" alt=""></a> 
 
   </main>
 
   <footer></footer>
   <script src="script/api.js"></script>
-  <!--<script src="script/home.js"></script>-->
+  <script src="script/home.js"></script>
 </body>
 </html>          
+<!--<div class="searchBar">
+  <input name="add" class="search" type="text" placeholder="Enter pokémon name here........." />
+  <p class="or">or</p>
+  <div class="filters">
+    <div class="drop filter">
+      <p>Fliter by :</p>
+    </div>
+    <div class="drop type">
+      <p>Type</p>
+      <img src="img/triangle.svg" alt="">
+    </div>
+    <div class="drop name">
+      <p>Name</p>
+      <img src="img/triangle.svg" alt="">
+    </div>
+    <div class="drop generation">
+      <p>Generation</p>
+      <img src="img/triangle.svg" alt="">
+    </div>
+  </div>
+</div>-->
