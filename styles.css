@@ -16,7 +16,7 @@
   height: 5rem;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #F8003F;
+  background: #796bb3;
 }
 *{
   box-sizing: border-box;
@@ -56,6 +56,7 @@ header{
   display: flex;
   align-items: center;
   width: 1.8rem;
+  cursor: pointer;
 }
 header .logo {
   display: flex;
@@ -71,6 +72,7 @@ header .logo img{
 .title{
   color: #F8003F;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 .title .io{
   color: #EBEAEA;
@@ -165,8 +167,39 @@ h1 .most{
   bottom:10%;
   width: 250px;
   height: 350px;
-  border-radius: 8%;
+  border-radius: 1.5rem;
+  
+  
 }
+.pokeList .card .buttons{
+  background-color: rgb(8%, 4%, 25%, 60%);
+  width: 250px;
+  height: 350px;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(5rem);
+  position: relative;
+  -ms-transform: translateY(-98.33%);
+  transform: translateY(-98.33%);
+  
+}
+.pokeList .card .buttons a {
+  -ms-transform: translateY(400%);
+  transform: translateY(400%);
+  padding: 7px 10px;
+  margin: 20px 40px;
+  display: block;
+  background: #EBEAEA ;
+  text-align: center;
+  border-radius: 2rem;
+  color:  #140941;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
 .grass{
   background: #B1F1A0;
 }
@@ -279,12 +312,10 @@ h1 .most{
 .cardHead{
   position: relative;
   background: white;
-  border-radius: 8% 8% 0 0;
+  border-radius: 1.5rem 1.5rem 0;
   height: 220px;
 }
-.effect {
- opacity: 0.2;
-}
+
 
 .pokeList .card .cardHead img{
   position: relative;
@@ -351,17 +382,27 @@ h1 .most{
 .scroll{
   display: flex;
   position: fixed;
-  width: 5rem;
-  height: 5rem;
-  right: 20px;
-  bottom: 20px;
+  width: 3rem;
+  height: 3rem;
+  right:10px;
+  bottom: 10px;
   opacity: 0;
   pointer-events: none;
   transition: all 0.4s;
+  background:#F8003F;
+  border-radius: 50%;
+  justify-content: center;
 }
 .scroll.active{
   pointer-events: auto;
   opacity: 1;
+}
+.scroll .arrow{
+  display: relative;
+  margin-right:2.3px;
+  margin-top: 7.8px;
+  width: 2rem;
+  height: 2rem;
 }
 .filtered{
   display: none !important;
@@ -398,7 +439,7 @@ h1 .most{
   header .logo img{
     width: 2.7rem;
   }
-.searchBar input{
+.searchBar  input{
   width: 100%;
 }
 .searchBar .filters {

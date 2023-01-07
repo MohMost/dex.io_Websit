@@ -5,11 +5,11 @@ const styles = document.querySelector(".theme")
 const icon = document.querySelector(".mode")
 const drop = document.querySelectorAll("div .down")
 const logo = document.querySelector(".logo img")
-const effect = document.querySelectorAll(".pokeList")
+const card = document.querySelectorAll(".pokeList.card")
 
 addForm.addEventListener("submit",e =>{
   e.preventDefault();
-  const poke = addForm.add.value.trim()
+  
   addForm.reset()
 })
 
@@ -55,15 +55,4 @@ icon.addEventListener('click',()=>{
   
 })
 
-/*effect.addEventListener('click', ()=>{
-  if(!effect.classList.contains('effect')){
-    effect.classList.add('effect')
-  }else{
-    effect.classList.remove('effect')
 
-  }
-})*/
-const divs = effect[0]
-divs.forEach(div , () =>{
-  console.log(div)
-})
