@@ -1,30 +1,25 @@
-const container = document.querySelector('.pokeList')
-
-
-
-
-
+const container = document.querySelector(".pokeList");
+const containers = document.querySelectorAll(".pokeList .card");
 const fetchPokemon = async () => {
-
-  for (let i = 1; i <=905; i++){
-    await getPokemon(i)
-    
+  for (let i = 1; i <= 905; i++) {
+    await getPokemon(i);
   }
-}
+};
 
 const getPokemon = async (id) => {
-  const base =`https://pokeapi.co/api/v2/pokemon/${id}`
-  const pokemonData = await fetch(base) 
-  const pokemon = await pokemonData.json()
-  creatCard(pokemon)
+  const base = `https://pokeapi.co/api/v2/pokemon/${id}`;
+  const pokemonData = await fetch(base);
+  const pokemon = await pokemonData.json();
+  creatCard(pokemon);
   
-}
+};
 
-fetchPokemon()
+fetchPokemon();
 
 function creatCard(pokemon) {
-  const main = document.querySelector('main')
-  const element = document.createElement("div")
+  const main = document.querySelector("main");
+  const element = document.createElement("div");
+  
   const buttons = `
      <div class="buttons">
       <a class="viewDetails" href="#">
@@ -38,31 +33,30 @@ function creatCard(pokemon) {
         <img style="opacity:0;" src="img/plus-solid.svg" width="15px">
       </a>
      </div>
-  `
-  element.setAttribute('data-tilt', '')
-  element.classList.add(`card`)
-  element.classList.add(`${pokemon.types[0].type.name}`)
+  `;
+  element.setAttribute("data-tilt", "");
+  element.classList.add(`card`);
+  element.classList.add(`${pokemon.types[0].type.name}`);
 
-main.addEventListener('click',(e)=>{
-    if (element.classList.contains('effect')){
-      element.classList.remove('effect')
-      element.innerHTML =html 
+  main.addEventListener("click", (e) => {
+    if (element.classList.contains("effect")) {
+      element.classList.remove("effect");
+      element.innerHTML = html;
     }
-    e.stopPropagation()
-  })
-  element.addEventListener('click',(e)=>{
-    if (!element.classList.contains('effect')){
-      element.classList.add('effect')
-      element.innerHTML =html + buttons
-      
-    }else {
-      element.classList.remove('effect')
-      element.innerHTML =html
+    e.stopPropagation();
+  });
+  element.addEventListener("click", (e) => {
+    if (!element.classList.contains("effect")) {
+      element.classList.add("effect");
+      element.innerHTML = html + buttons;
+    } else {
+      element.classList.remove("effect");
+      element.innerHTML = html;
     }
-    e.stopPropagation()
-  })
-  
-  const html =`
+    e.stopPropagation();
+  });
+
+  const html = `
   <div class="cardHead" >
     <img width="220px" src="${pokemon.sprites.other["official-artwork"].front_default}" alt="">
     <div class="index"><p>#${pokemon.id}</p></div>
@@ -73,6 +67,7 @@ main.addEventListener('click',(e)=>{
       <img src="img/eng/${pokemon.types[0].type.name}.png" alt="">
     </div>
     <div class="stats">
+      <p></p>
       <ul class="stats1">
         <li>HP: ${pokemon.stats[0].base_stat}</li>
         <li>ATK: ${pokemon.stats[1].base_stat}</li>
@@ -84,13 +79,16 @@ main.addEventListener('click',(e)=>{
         <li>SP.DEF: ${pokemon.stats[4].base_stat}</li>
         <li>SPD: ${pokemon.stats[5].base_stat}</li>
       </ul>
+      <p></p>
     </div>
   </div>
   
-  `
- element.innerHTML =html
+  `;
+  element.innerHTML = html;
+  container.append(element);
+
+
  
- container.append(element)
- 
+  
 }
 

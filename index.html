@@ -1,82 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link class="theme" rel="stylesheet" href="styles.css">
-  <style >@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');</style>
-  <script src="https://kit.fontawesome.com/8aa12b2e1f.js" crossorigin="anonymous"></script>
-  <title>DEX.IO</title>
-</head>
-<body>
-  
-  <!--header-->
-  
-  <header class="header">
-    <div class="logo">
-      <img src="img/darkball.png" alt="" width="35px">
-      <a class="title" href="">DEX<span class="io">.IO</span></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link class="theme" rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap");
+    </style>
+    <script
+      src="https://kit.fontawesome.com/8aa12b2e1f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>DEX.IO</title>
+  </head>
+  <body>
+    <!--header-->
+
+    <header class="header">
+      <div class="logo">
+        <img src="img/darkball.png" alt="" width="35px" />
+        <a class="title" href="">DEX<span class="io">.IO</span></a>
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li><img class="mode" src="img/light.svg" alt="" /></li>
+          <li><img class="language" src="img/flag.svg" /></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="h1">
+      <h1>
+        A PokeDex Project By <br />
+        <span class="most">Moh Most</span>
+      </h1>
     </div>
-    
-    <nav class="navbar">
-      <ul>
-        <li><img class="mode" src="img/light.svg" alt=""></li>
-        <li><img class="language" src="img/flag.svg"></li>
-      </ul>
-    </nav>
-  </header>
-  <div class="h1">
-    <h1 >A PokeDex Project By <br> <span class="most">Moh Most</span></h1>
-  </div>
-  <!--content-->
+    <!--content-->
 
-  <main>
+    <main>
+      <!--Search & filter-->
 
-    <!--Search & filter-->
+      <div class="searchBar">
+        <form class="add">
+          <input
+            name="add"
+            class="search"
+            type="text"
+            placeholder="Enter pokémon name here........."
+          />
+        </form>
 
-    <div  class="searchBar">
-      <form class="add">
-        <input name="add" class="search" type="text" placeholder="Enter pokémon name here........." />
-      </form>
-      
-      <p class="or">or</p>
-      <div class="filters">
-        <div class="drop filter">
-          <p>Fliter by :</p>
-        </div>
-        <div class="drop type">
-          <p>Type</p>
-          <img class="down" src="img/triangle.svg" alt="">
-        </div>
-        <div class="drop name">
-          <p>Name</p>
-          <img class="down" src="img/triangle.svg" alt="">
-        </div>
-        <div class="drop generation">
-          <p>Generation</p>
-          <img class="down" src="img/triangle.svg" alt="">
+        <p class="or" >or <span style="color:#ebeaea;">Fliter by :</span></p>
+        <div class="filters">
+          <div class="drop filter">
+            <p >Fliter by :</p>
+          </div>
+          <div class="container">
+            <div class="drop type">
+              <p>Type</p>
+              <img class="down" src="img/triangle.svg" alt="" />
+            </div>
+        
+            <ul class="sub a show">
+              <li>grass</li>
+              <li>fire</li>
+              <li>water</li>
+              <li>bug</li>
+              <li>normal</li>
+              <li>poison</li>
+              <li>electric</li>
+              <li>ground</li>
+              <li>fairy</li>
+              <li>fighting</li>
+              <li>ghost</li>
+              <li>dark</li>
+              <li>steel</li>
+              <li>psychic</li>
+              <li>flying</li>
+              <li>rock</li>
+              <li>ice</li>
+              <li>dragon</li>
+            </ul>
+          </div>
+          <div class="container">
+            <div class="drop name">
+              <p>Generation</p>
+              <img class="down" src="img/triangle.svg" alt="" />
+            </div>
+            <ul class="sub b show">
+              <li>Gen 1</li>
+              <li>Gen 2</li>
+              <li>Gen 3</li>
+              <li>Gen 4</li>
+              <li>Gen 5</li>
+              <li>Gen 6</li>
+              <li>Gen 7</li>
+              <li>Gen 8</li>
+            </ul>
+          </div>
+          <div class="container">
+            <div class="drop generation">
+              <p>Egg group</p>
+              <img class="down" src="img/triangle.svg" alt="" />
+            </div>
+            <ul class="sub c show">
+              <li>monster</li>
+              <li>water 1</li>
+              <li>water 2</li>
+              <li>water 3</li>
+              <li>bug</li>
+              <li>flying</li>
+              <li>field</li>
+              <li>fairy</li>
+              <li>grass</li>
+              <li>human-like</li>
+              <li>mineral</li>
+              <li>amorphous</li>
+              <li>ditto</li>
+              <li>dragon</li>
+              <li>no egg group</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--Pokemon list-->
+      <!--Pokemon list-->
 
-    <div  class="pokeList" >
-    
-    </div> 
-<a class="scroll" href="#"><img class="arrow" src="img/right.png" alt=""></a> 
+      <div class="pokeList"></div>
+      <a class="scroll" href="#"><img class="arrow" src="img/right.png" alt=""/></a>
+    </main>
 
-  </main>
+    <footer></footer>
 
-  <footer></footer>
-  
-  <script src="script/api.js"></script>
-  <script type="text/javascript" src="script/vanilla-tilt.js"></script>
-  <script src="script/home.js"></script>
- 
-</body>
-</html>          
+    <script src="script/api.js"></script>
+    <script type="text/javascript" src="script/vanilla-tilt.js"></script>
+    <script src="script/home.js"></script>
+  </body>
+</html>
 <!--<div class="searchBar">
   <input name="add" class="search" type="text" placeholder="Enter pokémon name here........." />
   <p class="or">or</p>
