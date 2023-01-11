@@ -9,6 +9,14 @@ const logo = document.querySelector(".logo img");
 const card = document.querySelectorAll(".pokeList.card");
 const tables = document.querySelectorAll(".searchBar .filters .container .sub");
 const toggle = document.querySelector(".searchBar");
+const selectorsA = document.querySelectorAll(".searchBar .filters .container .a")
+const selectA = document.querySelector(".searchBar .filters .container .type")
+const selectorsB = document.querySelectorAll(".searchBar .filters .container .b")
+const selectB = document.querySelector(".searchBar .filters .container .name")
+const selectorsC = document.querySelectorAll(".searchBar .filters .container .c")
+const selectC = document.querySelector(".searchBar .filters .container .generation")
+
+
 
 addForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -60,16 +68,17 @@ icon.addEventListener("click", () => {
 });
 
 
-boxes.forEach((box) => {
+  boxes.forEach((box) => {
 
   const drops = box.querySelectorAll(".searchBar .filters .container .drop");
-  
   const filters = box.querySelectorAll(".searchBar .filters .container .drop p");
   const arrows = box.querySelectorAll(".searchBar .filters .container .drop img");
   const selects = box.querySelectorAll(".searchBar .filters .container .sub li");
-  console.log()
-
-
+  const selectsA = box.querySelector(".searchBar .filters .container .a li")
+  
+   
+  
+  
 
   drops.forEach((drop) => {
     drop.addEventListener("click", () => {
@@ -101,5 +110,53 @@ boxes.forEach((box) => {
 });
 
 
+selectorsA.forEach((selector) => {
+  selector.addEventListener("click", () => {
+    console.log("clicked")
+    Array.from(container.children)
+    .filter((poke) => !poke.classList.contains(selectA.innerText))
+    .forEach((poke) => poke.classList.add("filtered"));
+    
+    Array.from(container.children)
+    .filter((poke) => poke.classList.contains(selectA.innerText))
+    .forEach((poke) =>poke.classList.remove("filtered"));
+  })
+})
 
+selectorsB.forEach((selector) => {
+  selector.addEventListener("click", () => {
+    console.log("gen clicked")
+    
+    
+    Array.from(container.children)
+    .filter((poke) => !poke.classList.contains(selectB.innerText))
+    .forEach((poke) => poke.classList.add("filtered"));
+    
+    Array.from(container.children)
+    .filter((poke) => poke.classList.contains(selectB.innerText))
+    .forEach((poke) =>poke.classList.remove("filtered")); 
+  })
+   
+    
+})
 
+selectorsC.forEach((selector) => {
+  selector.addEventListener("click", () => {
+    console.log("gen clicked")
+    
+    
+    Array.from(container.children)
+    .filter((poke) => !poke.classList.contains(selectC.innerText))
+    .forEach((poke) => poke.classList.add("filtered"));
+    
+    Array.from(container.children)
+    .filter((poke) => poke.classList.contains(selectC.innerText))
+    .forEach((poke) =>poke.classList.remove("filtered")); 
+  })
+   
+    
+})  
+
+      
+
+    

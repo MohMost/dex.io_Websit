@@ -1,18 +1,6 @@
 const container = document.querySelector(".pokeList");
 const containers = document.querySelectorAll(".pokeList .card");
-const arrow = document.querySelector(".scroll");
-const boxes = document.querySelectorAll(".container");
-const search = document.querySelector(".searchBar .search");
-const addForm = document.querySelector(".add");
-const styles = document.querySelector(".theme");
-const icon = document.querySelector(".mode");
-const drop = document.querySelectorAll("div .down");
-const logo = document.querySelector(".logo img");
-const card = document.querySelectorAll(".pokeList.card");
-const tables = document.querySelectorAll(".searchBar .filters .container .sub");
-const toggle = document.querySelector(".searchBar");
 const base = `https://pokeapi.co/api/v2/pokemon/`
-
 const fetchPokemon = async () => {
   for (let i = 1; i <= 905; i++) {
     await getPokemon(i);
@@ -20,17 +8,19 @@ const fetchPokemon = async () => {
 };
 
 const getPokemon = async (id) => {
-  const byId = base + `${id}`;
-  const pokemonData = await fetch(byId);
+  const base = `https://pokeapi.co/api/v2/pokemon/${id}`
+  const base2=`https://pokeapi.co/api/v2/pokemon-species/${id}`
+  const pokemonData = await fetch(base);
   const pokemon = await pokemonData.json();
-  creatCard(pokemon)
+  const pokemonData2 = await fetch(base2);
+  const pokemon2 = await pokemonData2.json();
+  creatCard(pokemon, pokemon2);
   
 };
 
 fetchPokemon();
 
-function creatCard(pokemon) {
-  
+function creatCard(pokemon, pokemon2) {
   const main = document.querySelector("main");
   const element = document.createElement("div");
   
@@ -48,10 +38,22 @@ function creatCard(pokemon) {
       </a>
      </div>
   `;
-  element.setAttribute("data-tilt", "");
   element.classList.add(`card`);
+  let genArr = Array.from(pokemon2.generation.name)
+  genArr[0]=genArr[0].toUpperCase()
+  let genArr2 = genArr.join('')
   element.classList.add(`${pokemon.types[0].type.name}`);
+  element.classList.add(`${genArr2}`);
+  element.classList.add(`${pokemon2.egg_groups[0].name}__egg` );;
+  element.setAttribute("id", `${pokemon.id}`);
+  if (pokemon.types.length === 2){
+    console.log(`type 1: ${pokemon.types[0].type.name}`,`type 2: ${pokemon.types[1].type.name}`)
+  }else{
+    console.log(`type 1: ${pokemon.types[0].type.name}`)
+  }
+  
 
+  
   main.addEventListener("click", (e) => {
     if (element.classList.contains("effect")) {
       element.classList.remove("effect");
@@ -69,18 +71,16 @@ function creatCard(pokemon) {
     }
     e.stopPropagation();
   });
-  const name = pokemon.name
-  const id = pokemon.id
-  const type1 = pokemon.types[0].type.name
+  
   const html = `
   <div class="cardHead" >
     <img width="220px" src="${pokemon.sprites.other["official-artwork"].front_default}" alt="">
-    <div class="index"><p>#${id}</p></div>
+    <div class="index"><p>#${pokemon.id}</p></div>
   </div>
   <div class="cardDetail">
     <div>
-      <p>${name}</p>
-      <img src="img/eng/${type1}.png" alt="">
+      <p>${pokemon.name}</p>
+      <img src="img/eng/${pokemon.types[0].type.name}.png" alt="">
     </div>
     <div class="stats">
       <p></p>
@@ -100,9 +100,36 @@ function creatCard(pokemon) {
   </div>
   
   `;
+
+  element.innerHTML = html;
+  container.append(element);
   
-    element.innerHTML = html;
-    container.append(element);
+  /*console.log(element.getAttribute("id"));
+  switch(parseFloat(element.getAttribute("id"))){
+    case parseFloat(element.getAttribute("id")) <= 151:
+      element.classList.add("Gen-1")
+      break
+    case 152 <= parseFloat(element.getAttribute("id")) <= 251:
+      element.classList.add("Gen-2")
+      break
+    case 252 <= parseFloat(element.getAttribute("id")) <= 386:
+      element.classList.add("Gen-3")
+      break
+    case 387 <= parseFloat(element.getAttribute("id")) <= 493:
+      element.classList.add("Gen-4")
+      break
+    case 494 <= parseFloat(element.getAttribute("id")) <= 649:
+      element.classList.add("Gen-5")
+      break
+    case 650 <= parseFloat(element.getAttribute("id")) <= 721:
+      element.classList.add("Gen-6")
+      break
+    case 722 <= parseFloat(element.getAttribute("id")) <= 809:
+      element.classList.add("Gen-7")
+      break
+    default:
+      element.classList.add("Gen-8")
+      
+  }*/
+  
 }
-
-

@@ -147,7 +147,7 @@ h1 .most {
   background: #2e314e;
   border-radius: 0.5em ;
   cursor: pointer;
-  text-transform: capitalize;
+  
 }
 .searchBar .filters .filter {
   display: none;
@@ -195,7 +195,7 @@ h1 .most {
   display: block;
   color: #ebeaea;
   text-align: center;
-  text-transform: capitalize;
+  
   border-radius:0.5em;
   
 }
