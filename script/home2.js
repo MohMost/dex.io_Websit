@@ -1,7 +1,7 @@
 const arrow = document.querySelector(".scroll");
 const boxes = document.querySelectorAll(".container");
 const search = document.querySelector(".searchBar .search");
-const addForm = document.querySelector(".add");
+
 const styles = document.querySelector(".theme");
 const icon = document.querySelector(".mode");
 const drop = document.querySelectorAll("div .down");
@@ -10,11 +10,11 @@ const card = document.querySelectorAll(".pokeList.card");
 const tables = document.querySelectorAll(".searchBar .filters .container .sub");
 const toggle = document.querySelector(".searchBar");
 const selectorsA = document.querySelectorAll(".searchBar .filters .container .a")
-const selectA = document.querySelector(".searchBar .filters .container .type")
+const selectA = document.querySelector(".searchBar .filters .container .type p")
 const selectorsB = document.querySelectorAll(".searchBar .filters .container .b")
-const selectB = document.querySelector(".searchBar .filters .container .name")
+const selectB = document.querySelector(".searchBar .filters .container .name p")
 const selectorsC = document.querySelectorAll(".searchBar .filters .container .c")
-const selectC = document.querySelector(".searchBar .filters .container .generation")
+const selectC = document.querySelector(".searchBar .filters .container .generation p")
 
 
 
@@ -112,29 +112,29 @@ icon.addEventListener("click", () => {
 
 selectorsA.forEach((selector) => {
   selector.addEventListener("click", () => {
-    console.log("clicked")
+    selectB.innerText="Generation"
+    selectC.innerText="Egg group"
     Array.from(container.children)
     .filter((poke) => !poke.classList.contains(selectA.innerText))
-    .forEach((poke) => poke.classList.add("filtered"));
+    .forEach((poke) => poke.style.display = "none");
     
     Array.from(container.children)
     .filter((poke) => poke.classList.contains(selectA.innerText))
-    .forEach((poke) =>poke.classList.remove("filtered"));
+    .forEach((poke) =>poke.style.display = "");
   })
 })
 
 selectorsB.forEach((selector) => {
   selector.addEventListener("click", () => {
-    console.log("gen clicked")
-    
-    
+    selectA.innerText="Type"
+    selectC.innerText="Egg group"
     Array.from(container.children)
     .filter((poke) => !poke.classList.contains(selectB.innerText))
-    .forEach((poke) => poke.classList.add("filtered"));
+    .forEach((poke) => poke.style.display = "none");
     
     Array.from(container.children)
     .filter((poke) => poke.classList.contains(selectB.innerText))
-    .forEach((poke) =>poke.classList.remove("filtered")); 
+    .forEach((poke) =>poke.style.display = ""); 
   })
    
     
@@ -142,16 +142,15 @@ selectorsB.forEach((selector) => {
 
 selectorsC.forEach((selector) => {
   selector.addEventListener("click", () => {
-    console.log("gen clicked")
-    
-    
+    selectA.innerText="Type"
+    selectB.innerText="Generation"
     Array.from(container.children)
     .filter((poke) => !poke.classList.contains(selectC.innerText))
-    .forEach((poke) => poke.classList.add("filtered"));
+    .forEach((poke) => poke.style.display = "none");
     
     Array.from(container.children)
     .filter((poke) => poke.classList.contains(selectC.innerText))
-    .forEach((poke) =>poke.classList.remove("filtered")); 
+    .forEach((poke) =>poke.style.display = ""); 
   })
    
     

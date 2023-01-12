@@ -1,6 +1,13 @@
 const container = document.querySelector(".pokeList");
 const containers = document.querySelectorAll(".pokeList .card");
+const language = document.querySelector(".header .navbar ul .language")
 const base = `https://pokeapi.co/api/v2/pokemon/`
+const h1 = document.querySelector(".h1 h1 p")
+const addForm = document.querySelector(".add")
+const input = document.querySelector(".add input")
+const or = document.querySelector(".searchBar .or")
+const by = document.querySelector(".searchBar .or .by")
+const by2 = document.querySelector(".searchBar .filters .filter p")
 const fetchPokemon = async () => {
   for (let i = 1; i <= 905; i++) {
     await getPokemon(i);
@@ -46,13 +53,13 @@ function creatCard(pokemon, pokemon2) {
   element.classList.add(`${genArr2}`);
   element.classList.add(`${pokemon2.egg_groups[0].name}__egg` );;
   element.setAttribute("id", `${pokemon.id}`);
-  if (pokemon.types.length === 2){
+  /*if (pokemon.types.length === 2){
     console.log(`type 1: ${pokemon.types[0].type.name}`,`type 2: ${pokemon.types[1].type.name}`)
   }else{
     console.log(`type 1: ${pokemon.types[0].type.name}`)
-  }
+  }*/
   
-
+  
   
   main.addEventListener("click", (e) => {
     if (element.classList.contains("effect")) {
@@ -104,32 +111,27 @@ function creatCard(pokemon, pokemon2) {
   element.innerHTML = html;
   container.append(element);
   
-  /*console.log(element.getAttribute("id"));
-  switch(parseFloat(element.getAttribute("id"))){
-    case parseFloat(element.getAttribute("id")) <= 151:
-      element.classList.add("Gen-1")
-      break
-    case 152 <= parseFloat(element.getAttribute("id")) <= 251:
-      element.classList.add("Gen-2")
-      break
-    case 252 <= parseFloat(element.getAttribute("id")) <= 386:
-      element.classList.add("Gen-3")
-      break
-    case 387 <= parseFloat(element.getAttribute("id")) <= 493:
-      element.classList.add("Gen-4")
-      break
-    case 494 <= parseFloat(element.getAttribute("id")) <= 649:
-      element.classList.add("Gen-5")
-      break
-    case 650 <= parseFloat(element.getAttribute("id")) <= 721:
-      element.classList.add("Gen-6")
-      break
-    case 722 <= parseFloat(element.getAttribute("id")) <= 809:
-      element.classList.add("Gen-7")
-      break
-    default:
-      element.classList.add("Gen-8")
-      
-  }*/
-  
 }
+
+language.addEventListener('click',()=>{
+  let text = language.innerText
+ switch(text){
+  
+  case 'FR':
+    language.innerText ='EN'
+    h1.innerText='Un Projet Pokedex Par'
+    or.innerText='où'
+    by.innerText='Trier par :'
+    by2.innerText='Trier par :'
+    input.placeholder= 'Entrée un nom de pokemon ici.........'
+    break
+  case 'EN':
+    language.innerText ='FR'
+    or.innerText='or'
+    by.innerText='Fliter by :'
+    by2.innerText='Fliter by :'
+    h1.innerText='A PokeDex Project By'
+    input.placeholder= 'Enter pokémon name here.........'
+    break
+ }
+})

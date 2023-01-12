@@ -49,12 +49,15 @@ header {
 .navbar li {
   display: inline-block;
   padding-left: 1.5rem;
+  color: #ebeaea;
+  cursor: pointer;
+  align-items: center
 }
 .navbar ul li img {
   display: flex;
   align-items: center;
   width: 1.8rem;
-  cursor: pointer;
+  
 }
 header .logo {
   display: flex;
@@ -100,6 +103,7 @@ h1 .most {
 }
 
 .searchBar {
+  align-items: center;
   position: relative;
   padding: 4.5rem 10%;
 }
@@ -608,6 +612,9 @@ h1 .most {
   }
 }
 @media screen and (min-width: 1400px) {
+  .searchBar{
+    align-items: center;
+  }
   .searchBar input {
     padding: 2rem;
     font-size: 1.5rem;
