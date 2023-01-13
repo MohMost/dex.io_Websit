@@ -26,6 +26,11 @@
   text-decoration: none;
   list-style: none;
 }
+.cardDetail .types{
+  display: block;
+  
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -49,6 +54,12 @@ header {
 .navbar li {
   display: inline-block;
   padding-left: 1.5rem;
+  color: #ebeaea;
+  cursor: pointer;
+  align-items: center
+}
+.navbar li a {
+  display: inline-block;
   color: #ebeaea;
   cursor: pointer;
   align-items: center
@@ -248,6 +259,7 @@ h1 .most {
   width: 250px;
   height: 350px;
   border-radius: 1.5rem;
+  box-shadow: 0 0.3em 0.5em rgb(0,0,0, 0.2)
 }
 .pokeList .card .buttons {
   background-color: rgb(8%, 4%, 25%, 60%);
@@ -256,9 +268,14 @@ h1 .most {
   border-radius: 1.5rem;
   backdrop-filter: blur(5rem);
   position: relative;
-  -ms-transform: translateY(-97.7%);
-  transform: translateY(-97.7%);
+  -ms-transform: translateY(-96.6%);
+  transform: translateY(-96.6%);
 }
+.pokeList #866 div.buttons {
+  -ms-transform: translateY(-82%)!important;
+  transform: translateY(-82%)!important;
+}
+
 .pokeList .card .buttons a {
   -ms-transform: translateY(450%);
   transform: translateY(450%);
@@ -430,7 +447,7 @@ h1 .most {
 
   font-weight: 600;
   color: #140941;
-  margin: 15px;
+  margin: 13px 7px;
   text-transform: capitalize;
 }
 .cardDetail .stats {

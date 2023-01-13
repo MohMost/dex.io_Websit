@@ -1,7 +1,6 @@
 const arrow = document.querySelector(".scroll");
 const boxes = document.querySelectorAll(".container");
 const search = document.querySelector(".searchBar .search");
-
 const styles = document.querySelector(".theme");
 const icon = document.querySelector(".mode");
 const drop = document.querySelectorAll("div .down");
@@ -15,7 +14,6 @@ const selectorsB = document.querySelectorAll(".searchBar .filters .container .b"
 const selectB = document.querySelector(".searchBar .filters .container .name p")
 const selectorsC = document.querySelectorAll(".searchBar .filters .container .c")
 const selectC = document.querySelector(".searchBar .filters .container .generation p")
-
 
 
 addForm.addEventListener("submit", (e) => {
@@ -109,52 +107,37 @@ icon.addEventListener("click", () => {
 
 });
 
-
-selectorsA.forEach((selector) => {
-  selector.addEventListener("click", () => {
-    selectB.innerText="Generation"
-    selectC.innerText="Egg group"
-    Array.from(container.children)
-    .filter((poke) => !poke.classList.contains(selectA.innerText))
-    .forEach((poke) => poke.style.display = "none");
-    
-    Array.from(container.children)
-    .filter((poke) => poke.classList.contains(selectA.innerText))
-    .forEach((poke) =>poke.style.display = "");
+function filterFunc (selectors, select){
+  selectors.forEach((selector) => {
+    selector.addEventListener("click", () => {
+      switch (selectors){
+        case selectorsA :
+          selectB.innerText="Generation"
+          selectC.innerText="Egg group"
+          break
+        case selectorsB :
+          selectA.innerText="Type"
+          selectC.innerText="Egg group"
+          break
+        case selectorsC :
+          selectA.innerText="Type"
+          selectB.innerText="Generation"
+      }
+      Array.from(container.children)
+      .filter((poke) => !poke.classList.contains(select.innerText))
+      .forEach((poke) => poke.style.display = "none");
+      
+      Array.from(container.children)
+      .filter((poke) => poke.classList.contains(select.innerText))
+      .forEach((poke) =>poke.style.display = "");
+    })
   })
-})
+}
+filterFunc(selectorsA ,selectA)
+filterFunc(selectorsB ,selectB)
+filterFunc(selectorsC ,selectC)
 
-selectorsB.forEach((selector) => {
-  selector.addEventListener("click", () => {
-    selectA.innerText="Type"
-    selectC.innerText="Egg group"
-    Array.from(container.children)
-    .filter((poke) => !poke.classList.contains(selectB.innerText))
-    .forEach((poke) => poke.style.display = "none");
-    
-    Array.from(container.children)
-    .filter((poke) => poke.classList.contains(selectB.innerText))
-    .forEach((poke) =>poke.style.display = ""); 
-  })
-   
-    
-})
 
-selectorsC.forEach((selector) => {
-  selector.addEventListener("click", () => {
-    selectA.innerText="Type"
-    selectB.innerText="Generation"
-    Array.from(container.children)
-    .filter((poke) => !poke.classList.contains(selectC.innerText))
-    .forEach((poke) => poke.style.display = "none");
-    
-    Array.from(container.children)
-    .filter((poke) => poke.classList.contains(selectC.innerText))
-    .forEach((poke) =>poke.style.display = ""); 
-  })
-   
-    
-})  
 
       
 

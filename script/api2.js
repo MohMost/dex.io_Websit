@@ -9,7 +9,7 @@ const or = document.querySelector(".searchBar .or")
 const by = document.querySelector(".searchBar .or .by")
 const by2 = document.querySelector(".searchBar .filters .filter p")
 const fetchPokemon = async () => {
-  for (let i = 1; i <= 905; i++) {
+  for (let i = 1; i <= 800; i++) {
     await getPokemon(i);
   }
 };
@@ -53,12 +53,17 @@ function creatCard(pokemon, pokemon2) {
   element.classList.add(`${genArr2}`);
   element.classList.add(`${pokemon2.egg_groups[0].name}__egg` );;
   element.setAttribute("id", `${pokemon.id}`);
-  /*if (pokemon.types.length === 2){
-    console.log(`type 1: ${pokemon.types[0].type.name}`,`type 2: ${pokemon.types[1].type.name}`)
-  }else{
-    console.log(`type 1: ${pokemon.types[0].type.name}`)
-  }*/
   
+  let type1 =''
+  let type2 = ''
+
+  if (pokemon.types.length === 2){
+    type1 = pokemon.types[0].type.name
+    type2 = pokemon.types[1].type.name
+  }else{
+    type1 = pokemon.types[0].type.name
+    type2 = "empty"
+  }
   
   
   main.addEventListener("click", (e) => {
@@ -87,7 +92,10 @@ function creatCard(pokemon, pokemon2) {
   <div class="cardDetail">
     <div>
       <p>${pokemon.name}</p>
-      <img src="img/eng/${pokemon.types[0].type.name}.png" alt="">
+      <div class="types" >
+       <img src="img/eng/${type1}.png" alt="">
+       <img src="img/eng/${type2}.png" alt="">
+      </div>
     </div>
     <div class="stats">
       <p></p>
