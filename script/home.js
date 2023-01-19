@@ -3,6 +3,7 @@ const boxes = document.querySelectorAll(".container");
 const search = document.querySelector(".searchBar .search");
 const styles = document.querySelector(".theme");
 const icon = document.querySelector(".mode");
+const userIcon = document.querySelector(".user")
 const drop = document.querySelectorAll("div .down");
 const logo = document.querySelector(".logo img");
 const card = document.querySelectorAll(".pokeList.card");
@@ -52,6 +53,7 @@ icon.addEventListener("click", () => {
   if (styles.getAttribute("href") === "styles.css") {
     styles.setAttribute("href", "styles2.css");
     icon.setAttribute("src", "img/dark.svg");
+    userIcon.setAttribute("src", "img/user2.svg");
     drop[0].setAttribute("src", "img/triangled.svg");
     drop[1].setAttribute("src", "img/triangled.svg");
     drop[2].setAttribute("src", "img/triangled.svg");
@@ -59,6 +61,7 @@ icon.addEventListener("click", () => {
   } else {
     styles.setAttribute("href", "styles.css");
     icon.setAttribute("src", "img/light.svg");
+    userIcon.setAttribute("src", "img/user.svg")
     drop[0].setAttribute("src", "img/triangle.svg");
     drop[1].setAttribute("src", "img/triangle.svg");
     drop[2].setAttribute("src", "img/triangle.svg");

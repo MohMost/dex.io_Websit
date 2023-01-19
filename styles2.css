@@ -4,14 +4,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #141414;
+  background: #140941;
   border-radius: 100vw;
   margin-block: 0.5em;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #ebeaea;
-  border: 0.15em solid #ebeaea;
+  border: 0.15em solid #140941;
   border-radius: 100vw;
   height: 5rem;
 }
