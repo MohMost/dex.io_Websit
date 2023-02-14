@@ -9,7 +9,7 @@ const or = document.querySelector(".searchBar .or")
 const by = document.querySelector(".searchBar .or .by")
 const by2 = document.querySelector(".searchBar .filters .filter p")
 const fetchPokemon = async () => {
-  for (let i = 1; i <= 800; i++) {
+  for (let i = 1; i <= 1000; i++) {
     await getPokemon(i);
   }
 };
